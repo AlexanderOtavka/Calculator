@@ -1,6 +1,6 @@
 package calculator;
 
-public class Main extends Methods{
+public class Main extends Methods {
 	
 	public static void main(String[] args){
 		System.out.println("+ = addition");
@@ -9,5 +9,6 @@ public class Main extends Methods{
 		System.out.println("/ = division");
 		methodCaller.main();
 	}
+	
 
 }
