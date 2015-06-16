@@ -20,6 +20,7 @@ public class Methods {
 	
 	public void main(){
 		String firstInput;
+		@SuppressWarnings("resource")
 		Scanner userInput = new Scanner(System.in);
 		
 		System.out.println("What operation would you like to do?");
