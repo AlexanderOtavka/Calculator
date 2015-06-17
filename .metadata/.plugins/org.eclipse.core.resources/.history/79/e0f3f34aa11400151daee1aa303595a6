@@ -1,0 +1,29 @@
+package calculator;
+import java.awt.*;
+import javax.swing.*;
+
+@SuppressWarnings("serial") 
+class Methods extends userInterface{
+	
+	public int fNum;
+	public int sNUm;
+	
+	public static Methods methodCaller = new Methods();
+	
+	
+	public void addition(){
+		
+	}
+	
+	public void subtraction(){
+		
+	}
+	
+	public void multiplication(){
+		
+	}
+	
+	public void division(){
+		
+	}
+}

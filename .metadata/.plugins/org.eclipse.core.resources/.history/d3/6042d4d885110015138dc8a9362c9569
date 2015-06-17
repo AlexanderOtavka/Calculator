@@ -1,0 +1,26 @@
+package calculator;
+import java.util.Scanner;
+
+public class Main extends Methods{
+	
+	public static void main(String[] args){
+		String firstInput;
+		Scanner userInput = new Scanner(System.in);
+		System.out.println("What operation would you like to do?");
+		firstInput = userInput.nextLine();
+		
+		if(firstInput.equalsIgnoreCase("addition")){
+			methodCaller.addition();
+			
+		}else if(firstInput.equalsIgnoreCase("subtraction")){
+			methodCaller.subtraction();
+
+		}else if(firstInput.equalsIgnoreCase("multiplication")){
+			methodCaller.multiplication();
+			
+		}else if(firstInput.equalsIgnoreCase("multiplication")){
+			methodCaller.division();
+		}
+	}
+
+}

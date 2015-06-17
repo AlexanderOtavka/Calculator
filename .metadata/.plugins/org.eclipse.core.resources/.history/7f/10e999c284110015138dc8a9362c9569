@@ -1,0 +1,21 @@
+package calculator;
+import java.util.Scanner;
+
+public class Methods {
+	
+	public void addition(){
+		
+	}
+	
+	public void subtraction(){
+		
+	}
+	
+	public void multiplication(){
+		
+	}
+	
+	public void division(){
+		
+	}
+}
