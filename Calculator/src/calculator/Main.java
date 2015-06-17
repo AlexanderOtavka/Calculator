@@ -4,11 +4,11 @@ import javax.swing.*;
 public class Main{
 
 	public static void main(String[] args){
-		userInterface object = new userInterface();
+		UserInterface ui = new UserInterface();
 		
-		object.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //exit command
-		object.setSize(500,300); //setting window size
-		object.setVisible(true); //making it visible
+		ui.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //exit command
+		ui.setSize(500,300); //setting window size
+		ui.setVisible(true); //making it visible
 		
 		System.out.println("+ = addition");
 		System.out.println("- = subtraction");

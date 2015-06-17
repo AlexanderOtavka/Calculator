@@ -1,15 +1,20 @@
 package calculator;
-import java.awt.*;
+
 import javax.swing.*;
 
+// I renamed Methods to MathUI, and made it extend JFrame
 @SuppressWarnings("serial") 
-public class Methods extends userInterface{
+public class MathUI extends JFrame {
 	
 	public int fNum;
 	public int sNUm;
 	
-	public static Methods methodCaller = new Methods();
+	public MathUI() {
+	}
 	
+	public MathUI(String str) {
+		super(str);
+	}
 	
 	public void addition(){
 		

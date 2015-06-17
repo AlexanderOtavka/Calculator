@@ -3,8 +3,12 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
+// User Interface now extends MathUI, so it can call addition, etc...
+// Turns out I didn't need to do any static stuff.  Also, you can
+// probably just get rid of the MathUI class, and add its methods to 
+// this class, unless you want to inherit from it again.
 @SuppressWarnings("serial")
-public class userInterface extends JFrame{
+public class UserInterface extends MathUI {
 	private JButton one;
 	private JButton two;
 	private JButton three;
@@ -21,7 +25,7 @@ public class userInterface extends JFrame{
 	private JButton mul;
 	private JButton div;
 	
-	public userInterface(){
+	public UserInterface(){
 		super ("Calculator");
 		setLayout (new FlowLayout());
 		
@@ -57,7 +61,7 @@ public class userInterface extends JFrame{
 		add(mul);
 		add(div);
 		
-		theHandler handler = new theHandler();
+		Handler handler = new Handler();
 		one.addActionListener(handler);
 		two.addActionListener(handler);
 		three.addActionListener(handler);
@@ -76,32 +80,31 @@ public class userInterface extends JFrame{
 		
 	}
 	
-	public class theHandler implements ActionListener{
-		
+	public class Handler implements ActionListener{
+		@Override
 		public void actionPerformed(ActionEvent event){
 			if(event.getSource() == add){
 				System.out.println("+");
-				//ERROR (needs fixing)
-				methodCaller.addition();
+				addition();
 			}
 			
 			if(event.getSource() == sub){
 				System.out.println("-");
+				subtraction();
 			}
 			
 			if(event.getSource() == mul){
 				System.out.println("x");
+				multiplication();
 			}
 			
 			if(event.getSource() == div){
 				System.out.println("/");
+				division();
 			}
-			
-			
 		}
 	}
-	
-	}
+}
 
 
 
