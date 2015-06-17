@@ -1,14 +1,14 @@
 package calculator;
-import java.util.Scanner;
 import java.awt.*;
 import javax.swing.*;
 
+@SuppressWarnings("serial") 
 public class Methods extends userInterface{
 	
-	static int fNum;
-	static int sNUm;
+	public int fNum;
+	public int sNUm;
 	
-	public Methods methodCaller = new Methods();
+	public static Methods methodCaller = new Methods();
 	
 	
 	public void addition(){
