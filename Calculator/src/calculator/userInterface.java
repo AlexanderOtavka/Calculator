@@ -1,6 +1,6 @@
 package calculator;
 import java.awt.*;
-
+import java.awt.event.*;
 import javax.swing.*;
 
 @SuppressWarnings("serial")
@@ -25,8 +25,6 @@ public class userInterface extends JFrame{
 		super ("Calculator");
 		setLayout (new FlowLayout());
 		
-		JFrame windowOne = new JFrame();
-		
 		one =  new JButton("1");
 		two =  new JButton("2");
 		three =  new JButton("3");
@@ -37,8 +35,6 @@ public class userInterface extends JFrame{
 		eight =  new JButton("8");
 		nine =  new JButton("9");
 		ten =  new JButton("10");
-		
-		add(windowOne);
 		
 		add(one);
 		add(two);
@@ -51,11 +47,61 @@ public class userInterface extends JFrame{
 		add(nine);
 		add(ten);
 		
+		add = new JButton("+");
+		sub = new JButton("-");
+		mul = new JButton("x");
+		div = new JButton("/");
+		
 		add(add);
 		add(sub);
 		add(mul);
 		add(div);
 		
+		theHandler handler = new theHandler();
+		one.addActionListener(handler);
+		two.addActionListener(handler);
+		three.addActionListener(handler);
+		four.addActionListener(handler);
+		five.addActionListener(handler);
+		six.addActionListener(handler);
+		seven.addActionListener(handler);
+		eight.addActionListener(handler);
+		nine.addActionListener(handler);
+		ten.addActionListener(handler);
+		
+		add.addActionListener(handler);
+		sub.addActionListener(handler);
+		mul.addActionListener(handler);
+		div.addActionListener(handler);
+		
+	}
+	
+	public class theHandler implements ActionListener{
+		
+		public void actionPerformed(ActionEvent event){
+			if(event.getSource() == add){
+				System.out.println("+");
+				//ERROR (needs fixing)
+				methodCaller.addition();
+			}
+			
+			if(event.getSource() == sub){
+				System.out.println("-");
+			}
+			
+			if(event.getSource() == mul){
+				System.out.println("x");
+			}
+			
+			if(event.getSource() == div){
+				System.out.println("/");
+			}
+			
+			
+		}
+	}
+	
 	}
 
-}
+
+
